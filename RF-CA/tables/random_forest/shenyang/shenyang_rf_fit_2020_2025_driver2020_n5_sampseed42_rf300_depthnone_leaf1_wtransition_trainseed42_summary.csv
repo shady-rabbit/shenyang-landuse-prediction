@@ -1,0 +1,3 @@
+split,city,from_year,to_year,driver_year,sample_weight_mode,sample_count,weighted_pixel_count,overall_accuracy,weighted_overall_accuracy,kappa,weighted_kappa,macro_f1,weighted_f1,n_estimators,max_depth,min_samples_leaf,min_samples_split,max_features,class_weight,oob_score,sample_file
+train,shenyang,2020,2025,2020,transition,96840,10625475.634375,0.503934,0.982455,0.387763,0.955414,0.330169,0.982007,300,,1,2,sqrt,none,,E:\RF-CA\data\samples\shenyang\shenyang_rf_samples_fit_2020_2025_driver2020_n5_chg8000_stay8000_seed42.npz
+validation,shenyang,2020,2025,2020,transition,32280,3674253.365625,0.475929,0.916563,0.352909,0.799863,0.315433,0.919700,300,,1,2,sqrt,none,,E:\RF-CA\data\samples\shenyang\shenyang_rf_samples_fit_2020_2025_driver2020_n5_chg8000_stay8000_seed42.npz

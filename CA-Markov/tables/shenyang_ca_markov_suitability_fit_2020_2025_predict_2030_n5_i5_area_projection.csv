@@ -1,0 +1,10 @@
+class_code,class_name,base_pixels,markov_demand_pixels,ca_predicted_pixels,actual_pixels,markov_demand_area_km2,ca_predicted_area_km2,actual_area_km2,ca_area_difference_km2
+1,Cropland,10773557,10428821,10428821,,9385.938900,9385.938900,,
+2,Forest,444789,504624,504624,,454.161600,454.161600,,
+3,Shrub,83,169,169,,0.152100,0.152100,,
+4,Grassland,105036,120547,120547,,108.492300,108.492300,,
+5,Water,256340,281586,281586,,253.427400,253.427400,,
+6,Snow/Ice,0,0,0,,0.000000,0.000000,,
+7,Barren,6412,9376,9376,,8.438400,8.438400,,
+8,Impervious,2713512,2954606,2954606,,2659.145400,2659.145400,,
+9,Wetland,0,0,0,,0.000000,0.000000,,

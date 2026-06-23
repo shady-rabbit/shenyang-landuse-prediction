@@ -1,0 +1,2 @@
+city,mode,has_observed_target,fit_from,base_year,target_year,driver_year,neighborhood_size,iterations,rf_weight,neighbor_weight,random_weight,overall_accuracy,kappa,total_pixels,max_abs_demand_error_pixels,model_file,prediction_raster
+shenyang,projection,no,2020,2025,2030,2025,5,5,0.7,0.3,0.02,,,,0,E:\RF-CA\models\random_forest\shenyang\shenyang_rf_fit_2020_2025_driver2020_n5_sampseed42_rf300_depthnone_leaf1_wtransition_trainseed42.joblib,E:\RF-CA\output\rf_ca\shenyang\shenyang_rf_ca_fit_2020_2025_predict_2030_driver2025_n5_i5_rf300_depthnone_leaf1_rw070_nw030_seed42.tif

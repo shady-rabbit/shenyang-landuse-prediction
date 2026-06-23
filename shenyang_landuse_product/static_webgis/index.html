@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>沈阳市土地利用变化预测展示系统</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">CLCD 2015-2025 回测验证 · 2030 情景预测</p>
+        <h1>沈阳市土地利用变化预测展示系统</h1>
+      </div>
+      <div class="top-actions">
+        <span>RF-CA</span>
+        <span>Logistic-CA</span>
+        <span>CA-Markov</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="map-section" aria-label="地图展示">
+        <aside class="control-panel">
+          <div class="field">
+            <label for="layerType">图层类型</label>
+            <select id="layerType">
+              <option value="landuse">土地利用与预测结果</option>
+              <option value="drivers">驱动因子</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="groupSelect">图层分组</label>
+            <select id="groupSelect"></select>
+          </div>
+          <div class="field">
+            <label for="layerSelect">当前图层</label>
+            <select id="layerSelect"></select>
+          </div>
+          <div class="field">
+            <label for="zoomRange">缩放</label>
+            <input id="zoomRange" type="range" min="0.18" max="3.4" step="0.02" value="1" />
+          </div>
+          <button id="resetView" type="button" class="secondary-button">重置视图</button>
+          <div class="legend-block">
+            <h2>图例</h2>
+            <div id="legend"></div>
+          </div>
+          <div class="note-block">
+            <h2>展示说明</h2>
+            <p id="layerDescription"></p>
+            <p class="source-line" id="sourceLine"></p>
+          </div>
+        </aside>
+
+        <div class="map-workspace">
+          <div class="map-toolbar">
+            <div>
+              <h2 id="mapTitle">地图图层</h2>
+              <p id="mapSubtitle">拖拽平移，滚轮或滑块缩放。</p>
+            </div>
+            <div class="map-badges">
+              <span id="mapYear"></span>
+              <span id="mapModel"></span>
+            </div>
+          </div>
+          <div id="mapViewport" class="map-viewport">
+            <img id="mapImage" alt="当前地图图层" draggable="false" />
+          </div>
+        </div>
+      </section>
+
+      <nav class="tabs" aria-label="结果工作区">
+        <button class="tab-button active" data-tab="overview" type="button">综合概览</button>
+        <button class="tab-button" data-tab="accuracy" type="button">精度对比</button>
+        <button class="tab-button" data-tab="area" type="button">面积变化</button>
+        <button class="tab-button" data-tab="errors" type="button">类别误差</button>
+        <button class="tab-button" data-tab="figures" type="button">论文图件</button>
+      </nav>
+
+      <section id="overview" class="tab-panel active">
+        <div class="section-heading">
+          <h2>综合概览</h2>
+          <p>用于报告中说明“结果验证 + 方法对比 + 产品化输出”的核心指标。</p>
+        </div>
+        <div id="metricCards" class="metric-grid"></div>
+        <div class="two-column">
+          <article class="panel">
+            <h3>核心结论</h3>
+            <ul class="insight-list">
+              <li>RF-CA 在 2025 回测中取得最高 OA 和 Kappa，可作为主模型展示。</li>
+              <li>RF-CA 相比无驱动 CA-Markov 提升很小，说明 CA 邻域约束是空间格局模拟的主要贡献。</li>
+              <li>小面积类别如 Shrub、Barren、Wetland 的识别能力较弱，适合作为误差分析重点。</li>
+              <li>2030 面积需求在多个 CA 模型中较接近，模型差异主要体现在空间分配位置。</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3>RF 特征重要性 Top 10</h3>
+            <div id="featureChart" class="bar-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="accuracy" class="tab-panel">
+        <div class="section-heading">
+          <h2>2025 回测精度对比</h2>
+          <p>2015-2020 训练，基于 2020 预测 2025，并用真实 2025 CLCD 验证。</p>
+        </div>
+        <div id="accuracyBars" class="bar-list wide"></div>
+        <div class="table-wrap">
+          <table id="accuracyTable"></table>
+        </div>
+      </section>
+
+      <section id="area" class="tab-panel">
+        <div class="section-heading">
+          <h2>2025-2030 面积变化</h2>
+          <p>以 RF-CA 2030 预测为主展示，单位为 km²。</p>
+        </div>
+        <div id="areaChangeBars" class="bar-list wide"></div>
+        <div class="table-wrap">
+          <table id="areaTable"></table>
+        </div>
+      </section>
+
+      <section id="errors" class="tab-panel">
+        <div class="section-heading inline-heading">
+          <div>
+            <h2>类别精度与误差重点</h2>
+            <p>按模型查看各类 Precision、Recall、F1，辅助写“结论与不足”。</p>
+          </div>
+          <div class="field compact">
+            <label for="modelSelect">模型</label>
+            <select id="modelSelect"></select>
+          </div>
+        </div>
+        <div id="classF1Bars" class="bar-list wide"></div>
+        <div class="table-wrap">
+          <table id="classTable"></table>
+        </div>
+      </section>
+
+      <section id="figures" class="tab-panel">
+        <div class="section-heading">
+          <h2>论文图件汇总</h2>
+          <p>来自 RF-CA 项目的论文图件目录，可直接放入报告或作为展示截图。</p>
+        </div>
+        <div id="figureGallery" class="figure-grid"></div>
+      </section>
+    </main>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

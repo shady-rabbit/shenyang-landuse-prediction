@@ -1,0 +1,6 @@
+model,fit_from,base_year,target_year,key_parameters,overall_accuracy,kappa,delta_oa_vs_markov_baseline,delta_kappa_vs_markov_baseline,notes
+Markov baseline,2015,2020,2025,non-spatial Markov allocation,0.949188,0.867277,0.000000,0.000000,Reference baseline from CA-Markov project
+CA-Markov,2015,2020,2025,n5_i5_random_weight0.03,0.959903,0.895266,0.010715,0.027989,No external suitability factors
+CA-Markov suitability,2015,2020,2025,n5_i5_nw090_sw010,0.959885,0.895220,0.010697,0.027943,Best suitability-factor run copied from CA-Markov project
+Logistic-CA,2015,2020,2025,n5_i5_lbfgs_samples40000_changed100000,0.959266,0.893603,0.010078,0.026326,Logistic transition probability plus CA allocation
+RF-CA,2015,2020,2025,n5_i5_rf300_rw070_nw030_seed42,0.959994,0.895504,0.010806,0.028227,Random forest transition probability plus CA allocation

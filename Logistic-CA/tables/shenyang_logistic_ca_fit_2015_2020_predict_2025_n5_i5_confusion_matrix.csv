@@ -1,0 +1,10 @@
+actual\predicted,Cropland,Forest,Shrub,Grassland,Water,Snow/Ice,Barren,Impervious,Wetland
+Cropland,10650208,21567,0,30535,10222,0,192,60833,0
+Forest,70524,369828,0,3007,312,0,0,1118,0
+Shrub,53,29,0,1,0,0,0,0,0
+Grassland,59501,189,0,45126,63,0,37,120,0
+Water,38251,2478,0,7120,179243,0,551,28697,0
+Snow/Ice,0,0,0,0,0,0,0,0,0
+Barren,148,41,0,2625,1287,0,1701,610,0
+Impervious,227605,296,0,10562,3167,0,742,2471140,0
+Wetland,0,0,0,0,0,0,0,0,0

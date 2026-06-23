@@ -1,0 +1,2 @@
+city,mode,fit_from,base_year,target_year,factor_year,neighborhood_size,iterations,samples_per_class,max_changed_samples,sgd_alpha,sgd_max_iter,max_abs_demand_error_pixels,output_raster
+shenyang,prediction,2020,2025,2030,2025,5,5,20000,60000,0.0001,1000,0,E:\Logistic-CA\output\logistic_ca\shenyang\shenyang_logistic_ca_fit_2020_2025_predict_2030_n5_i5.tif

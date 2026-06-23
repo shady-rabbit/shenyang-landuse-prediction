@@ -1,0 +1,2 @@
+city,mode,has_observed_target,fit_from,base_year,target_year,neighborhood_size,iterations,random_weight,overall_accuracy,kappa,total_pixels,max_abs_demand_error_pixels,output_raster
+shenyang,projection,no,2020,2025,2030,5,5,0.03,,,,0,E:\CA-Markov\output\ca_markov\shenyang\shenyang_ca_markov_fit_2020_2025_predict_2030_n5_i5.tif

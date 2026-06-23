@@ -1,0 +1,13 @@
+City: shenyang
+Train transition: 2020->2025
+Predict target: 2025->2030
+Train factor year: 2025
+Predict factor year: 2025
+Neighborhood: 5x5
+Iterations: 5
+Loading fit/base land-use rasters...
+Loaded and aligned fit/base land-use rasters.
+Observed target raster not found: E:\Logistic-CA\data\processed\landuse\shenyang\shenyang_clcd_v01_2030_original.tif
+Loading training factors for 2025...
+Loaded training factors.
+Training Logistic model...

@@ -1,0 +1,35 @@
+# Raw and processed geospatial data
+**/data/raw/
+**/data/processed/
+**/_cache/
+
+# Large raster/model artifacts
+*.tif
+*.tiff
+*.vrt
+*.img
+*.hgt
+*.zip
+*.gz
+*.npz
+*.npy
+*.joblib
+*.pkl
+
+# Keep lightweight result assets
+!**/figures/**/*.png
+!**/tables/**/*.csv
+!**/tables/**/*.json
+!**/static_webgis/assets/**/*.png
+!**/static_webgis/assets/**/*.js
+!**/static_webgis/assets/**/*.json
+!**/static_webgis/assets/**/*.css
+
+# Local/editor/cache files
+.idea/
+.agents/
+.codex/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

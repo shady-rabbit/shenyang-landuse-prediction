@@ -1,0 +1,5 @@
+fit_from,base_year,target_year,overall_accuracy,kappa,total_pixels,output_raster
+2000,2005,2010,0.950062,0.843392,14299729,E:\CA-Markov\output\markov_baseline\shenyang\shenyang_markov_fit_2000_2005_predict_2010.tif
+2005,2010,2015,0.940795,0.828821,14299729,E:\CA-Markov\output\markov_baseline\shenyang\shenyang_markov_fit_2005_2010_predict_2015.tif
+2010,2015,2020,0.951143,0.868661,14299729,E:\CA-Markov\output\markov_baseline\shenyang\shenyang_markov_fit_2010_2015_predict_2020.tif
+2015,2020,2025,0.949188,0.867277,14299729,E:\CA-Markov\output\markov_baseline\shenyang\shenyang_markov_fit_2015_2020_predict_2025.tif

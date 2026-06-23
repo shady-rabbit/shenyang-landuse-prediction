@@ -1,0 +1,10 @@
+actual_code,actual_name,predicted_1,predicted_2,predicted_3,predicted_4,predicted_5,predicted_6,predicted_7,predicted_8,predicted_9
+1,Cropland,10704278,53479,0,17864,97951,0,542,269772,0
+2,Forest,41433,337514,0,544,226,0,5,1398,0
+3,Shrub,0,0,0,0,0,0,0,0,0
+4,Grassland,54315,784,0,14894,1128,0,249,3874,0
+5,Water,26559,44,0,54,187677,0,1045,14002,0
+6,Snow/Ice,0,0,0,0,0,0,0,0,0
+7,Barren,629,4,0,152,650,0,1136,708,0
+8,Impervious,90741,451,0,869,18990,0,182,2355586,0
+9,Wetland,0,0,0,0,0,0,0,0,0
